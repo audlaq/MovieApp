@@ -1,0 +1,15 @@
+<h1> RetFlix </h1>
+
+<p>Welcome to RetFlix! See our collection of movies below.</p>
+
+<%= render "search" %> <br>
+
+<h3><%= link_to "ADD NEW MOVIE", new_movie_path %></h3>
+
+
+<% @movies.each do |movie| %>
+
+<%= link_to movie.title, movie_path(movie) %>
+ <br>
+
+<%end%>
